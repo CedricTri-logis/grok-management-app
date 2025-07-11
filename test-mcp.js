@@ -29,7 +29,7 @@ async function testGitHub() {
 async function testSupabase() {
   try {
     const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
-    const { data: dbData, error } = await supabase.from('users').select('*').limit(1);  // Si "users" n'existe pas, remplace par une table réelle (e.g., 'auth.users' ou 'projects')
+    const { data: dbData, error } = await supabase.from('user_profiles').select('*').limit(1);  // Si "users" n'existe pas, remplace par une table réelle (e.g., 'auth.users' ou 'projects')
     if (error) throw error;
     console.log('Supabase query réussi :', dbData);
   } catch (error) {
