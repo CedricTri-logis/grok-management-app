@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { OpenAI } = require('openai');
+const { OpenAI } = require('openai/index.js');
 const { Pinecone } = require('@pinecone-database/pinecone');
 const { OpenAIEmbeddings } = require('@langchain/openai');
 const { Octokit } = require('octokit');
